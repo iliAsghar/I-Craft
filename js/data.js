@@ -747,40 +747,232 @@ const rules = [
    ------------------------------------------------------------------------- */
 const plugins = [
   {
-    id: "example-plugin-one",
-    name: "ExamplePlugin",
+    id: "tablistping",
+    name: "TabListPing",
     type: "plugin",
-    icon: null,
-    version: "1.20.x",
+    icon: "https://cdn.modrinth.com/data/MwLGimob/279fc74870608e5c68372acd3edc08426f77d82b.png",
+    version: "26.2",
     description: {
-      en: "Example placeholder entry — describe what this plugin actually does on your server here.",
-      fa: "نمونه‌ی جای‌گزین — در اینجا توضیح دهید این پلاگین دقیقاً چه کاری روی سرور شما انجام می‌دهد."
+      en: "TabListPing shows each player's ping time in the tab player list.",
+      fa: "TabListPing پینگ هر پلیر رو توی لیست Tab نشون میده."
     },
-    link: "#"
+    link: "https://modrinth.com/plugin/tablistping"
   },
   {
-    id: "example-datapack-one",
-    name: "ExampleDatapack",
+    id: "armorposer",
+    name: "ArmorPoser",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/ZuV7Ztiw/98841cfeaba308503327fccbb4c1bb6a6ab0455a.png",
+    version: "26.2",
+    description: {
+      en: "This paper plugin adds server-side compatibility with the Armor Poser mod. Armor Poser is a mod that adds a GUI for armor stands for easy posing of armor stands.",
+      fa: "این پلاگین Paper سازگاری سمت سرور با ماد Armor Poser را اضافه می‌کند. Armor Poser مادی است که یک رابط گرافیکی (GUI) برای آرموراستند اضافه می‌کند تا ظاهر آرموراستند به‌ راحتی عوض بشه."
+    },
+    link: "https://modrinth.com/plugin/armor-poser-plugin"
+  },
+  {
+    id: "viaversion",
+    name: "ViaVersion",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/P1OZGk5p/15d70082c9e487847aa44061225395edeb282fb1.png",
+    version: "26.2",
+    description: {
+      en: "Allow newer Java Edition clients to connect to older servers.",
+      fa: "ViaVersion به کلاینت‌های جدیدتر اجازه اتصال به سرور رو میده."
+    },
+    link: "https://modrinth.com/plugin/viaversion"
+  },
+  {
+    id: "viabackwards",
+    name: "ViaBackwards",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/NpvuJQoq/1b0ac36a9b4b1af781afa7f1485c487a2d945fbd.png",
+    version: "26.2",
+    description: {
+      en: "Allow older Java Edition clients to connect to newer servers.",
+      fa: "ViaBackwards به کلاینت‌های قدیمی‌تر اجازه اتصال به سرور رو میده."
+    },
+    link: "https://modrinth.com/plugin/viabackwards"
+  },
+  {
+    id: "invseeplusplus",
+    name: "InvSee++",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/bYazc7fd/12e01bf10425dae23030d0cd64f735c8bdc4235a.png",
+    version: "26.2",
+    description: {
+      en: "Allow the admins to view, and manipulate player inventories.",
+      fa: "InvSeePlusPlus به ادمین‌ها اجازه میده اینونتوری پلیرها رو مشاهده کنند و تغییر بدن."
+    },
+    link: "https://modrinth.com/plugin/invsee%2B%2B"
+  },
+  {
+    id: "skinsrestorer",
+    name: "SkinsRestorer",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/TsLS8Py5/a23c71312561d40d0e182d88585b71be9b5e8d81.webp",
+    version: "26.2",
+    description: {
+      en: "SkinsRestorer is a plugin that restores skins for offline mode servers & networks that gives the players ability to change their skins.",
+      fa: "SkinsRestorer به پلیرها اجازه میده بتونن اسکین خودشون رو در سرورهای آفلاین (کرک) تغییر بدن."
+    },
+    link: "https://modrinth.com/plugin/skinsrestorer"
+  },
+  {
+    id: "chunky",
+    name: "Chunky",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/fALzjamp/icon.png",
+    version: "26.2",
+    description: {
+      en: "Pre-generates chunks, quickly, efficiently, and safely.",
+      fa: "Chunky، چانک‌های سرور رو به تدریج لود میکنه تا با لود پلیرها لگ ایجاد نشه."
+    },
+    link: "https://modrinth.com/plugin/chunky"
+  },
+  {
+    id: "simplevoicechat",
+    name: "SimpleVoiceChat",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/9eGKb6K1/icon.png",
+    version: "26.2",
+    description: {
+      en: "A working voice chat plugin for Minecraft servers. you need the mod 'SimpleVoiceChat' in order to talk to others.",
+      fa: "SimpleVoiceChat یک پلاگین ویس‌چت برای سرورهای ماینکرفت هست. شما برای حرف زدن با دیگران به ماد 'SimpleVoiceChat' نیاز دارید."
+    },
+    link: "https://modrinth.com/plugin/simple-voice-chat"
+  },
+  {
+    id: "authme",
+    name: "AuthMeReloaded",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/9js4IEHC/0e76f206b4fdf2505d4bea01f5edc555e314c483.png",
+    version: "26.2",
+    description: {
+      en: "AuthMeReloaded is an authentication plugins used especially for offline servers.",
+      fa: "AuthMeReloaded یک پلاگین احرازهویت‌عه که مخصوصا برای سرورهای آفلاین (کرک) استفاده میشه."
+    },
+    link: "https://modrinth.com/plugin/authmereloaded"
+  },
+  {
+    id: "playtimecommand",
+    name: "Playtime Command",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/okeAxC3Y/10a1b5d8c84f954351d7be8917a596a894f08cf9.png",
+    version: "26.2",
+    description: {
+      en: "Playtime Command is a very simple plugin that lets you see your own or other online players' playtime.",
+      fa: "Playtime Command یک پلاگین ساده برای مشاهده پلی‌تایم خودتون یا بقیه پلیرهاست."
+    },
+    link: "https://modrinth.com/plugin/playtimecommand"
+  },
+  {
+    id: "gsit",
+    name: "GSit",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/GOHbQGyX/305f96bcdf7e2a419a8edee82657e7503a8a6e36.jpeg",
+    version: "26.2",
+    description: {
+      en: "GSit is a modern plugin featuring lay, sit and crawl commands",
+      fa: "GSit یک پلاگین مدرن دارای کامندهای sit، crawl و lay هست.",
+    },
+    link: ""
+  },
+  {
+    id: "fastleafdecay",
+    name: "FastLeafDecay",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/FnE6S0Zk/0920050d2a6e28aea183d4653a5fbaa76df39de6.png",
+    version: "26.2",
+    description: {
+      en: "FastLeafDecay speeds up leaf decay when chopping trees.",
+      fa: "FastLeafDecay خراب‌شدن برگ درخت هنگام کندن اون رو سریع تر می‌کنه."
+    },
+    link: ""
+  },
+  {
+    id: "playerpeek",
+    name: "PlayerPeek BETA",
+    type: "plugin",
+    icon: "",
+    version: "26.2",
+    description: {
+      en: "a plugin that lets the admins check a player's playtime and last join info.",
+      fa: "یک پلاگین که به ادمین‌ها اجازه مشاهده پلی‌تایم و آخرین لاگین پلیرها رو میده."
+    },
+    link: "https://modrinth.com/plugin/player-peek"
+  },
+  {
+    id: "silencemobs",
+    name: "Silence Mobs",
     type: "datapack",
-    icon: null,
-    version: "1.20.x",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWRpEyTf3najqsvlDTfMAp-UzYq2TDLbR-m0m6c8Ljcw&s",
+    version: "26.2",
     description: {
-      en: "Example placeholder entry — swap this out for a real datapack running on the server.",
-      fa: "نمونه‌ی جای‌گزین — این مورد را با یک دیتاپک واقعی که روی سرور اجرا می‌شود جایگزین کنید."
+      en: "Allows the ability to silence mobs with a nametag named 'Silence Me'.",
+      fa: "امکان ساکت کردن ماب‌ها با نیم‌تگ 'Silence Me' رو میده."
     },
-    link: "#"
+    link: "https://vanillatweaks.net/picker/datapacks/"
   },
   {
-    id: "example-plugin-two",
-    name: "AnotherPlugin",
-    type: "plugin",
-    icon: null,
-    version: "1.20.x",
+    id: "playerheaddrops",
+    name: "Player Head Drops",
+    type: "datapack",
+    icon: "https://mcheads.ru/heads/medium/front/ogqa.png",
+    version: "26.2",
     description: {
-      en: "A second placeholder entry, so the grid layout can be previewed with more than one card.",
-      fa: "یک نمونه‌ی دوم، تا چیدمان شبکه‌ای با بیش از یک کارت قابل پیش‌نمایش باشد."
+      en: "A Player will drop their head when killed by another player.",
+      fa: "اگر پلیری توسط یک پلیر دیگه کشته بشه، Headش رو دراپ میکنه."
     },
-    link: "#"
+    link: "https://vanillatweaks.net/picker/datapacks/"
+  },
+  {
+    id: "armorstatues",
+    name: "Armor Statues",
+    type: "datapack",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjQOqWabPCpI8jpNHlIiPcPLjrsfiFU5bCVrQ-XcNfw&s=10",
+    version: "26.2",
+    description: {
+      en: "Brings more functionality to the ArmorPoser plugin.",
+      fa: "کارایی‌هایی بیشتری به پلاگین ArmorPoser اضافه میکنه."
+    },
+    link: "https://vanillatweaks.net/picker/datapacks/"
+  },
+  {
+    id: "miniblocks",
+    name: "Mini Blocks",
+    type: "datapack",
+    icon: "https://minecraft.wiki/images/Stonecutter_JE2_BE1.gif?bb269",
+    version: "26.2",
+    description: {
+      en: "Allows making mini versions of different blocks using a stonecutter.",
+      fa: "امکان ساخت نسخه مینی بلاک‌ها توسط یک stonecutter رو فراهم می‌کنه."
+    },
+    link: "https://vanillatweaks.net/picker/datapacks/"
+  },
+  {
+    id: "antiendermangrief",
+    name: "Anti Enderman Grief",
+    type: "datapack",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQINy2FZzj4AemL6Mc1j71T4BkSjICX62lgnZeto9RDrg&s=10",
+    version: "26.2",
+    description: {
+      en: "Prevents endermen from picking up blocks.",
+      fa: "از برداشتن بلاک‌ها توسط اندرمن‌ها جلوگیری می‌کنه."
+    },
+    link: "https://vanillatweaks.net/picker/datapacks/"
+  },
+  {
+    id: "moremobheads",
+    name: "More Mob Heads",
+    type: "datapack",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllmV4xf8mWLAGTzxPWZ1D6zs94UfoP-Dc5rb17S3o4A&s=10",
+    version: "26.2",
+    description: {
+      en: "Adds a chance to recieve a mob's head upon killing it.",
+      fa: "بعد از کشتن یک ماب، احتمال داره هد اون دراپ شه."
+    },
+    link: "https://vanillatweaks.net/picker/datapacks/"
   }
 ];
 
