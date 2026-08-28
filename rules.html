@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rules — Server Portal</title>
+
+<script>
+(function(){
+  try{
+    var lang = localStorage.getItem('server-portal:lang') || 'en';
+    var theme = localStorage.getItem('server-portal:theme');
+    if(!theme){ theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('data-theme', theme);
+  }catch(e){}
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="rules">
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img class="js-logo" src="assets/logo.png" alt="Server logo">
+      <span class="js-brand-name brand-name">SERVER NAME</span>
+    </a>
+
+    <nav class="nav-primary js-nav-links" aria-label="Primary"></nav>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn lang-toggle js-lang-toggle" data-i18n-aria-label="action.toggleLang" aria-label="Switch language">EN</button>
+      <button type="button" class="icon-btn js-theme-toggle" data-i18n-aria-label="action.toggleTheme" aria-label="Toggle color theme"></button>
+      <button type="button" class="icon-btn nav-toggle js-nav-toggle" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="nav.openMenu"></button>
+    </div>
+  </div>
+
+</header>
+
+<div class="mobile-nav js-mobile-nav">
+  <nav class="js-nav-links" aria-label="Mobile navigation"></nav>
+</div>
+
+<main id="main">
+
+  <div class="rules-header">
+    <div class="container">
+      <h1 data-i18n="rules.title">Rules</h1>
+      <p data-i18n="rules.lede">Read through by category, or search below.</p>
+            <p class="rules-why" data-i18n="rules.why">
+        Rules exist to keep things fair.
+      </p>
+
+      <div class="rules-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <label for="rules-search-input" class="visually-hidden" data-i18n="rules.search.placeholder">Search rules…</label>
+        <input type="search" id="rules-search-input" class="js-rules-search-input" data-i18n-placeholder="rules.search.placeholder" placeholder="Search rules…" autocomplete="off">
+        <button type="button" class="search-clear js-rules-search-clear" data-i18n-aria-label="rules.search.clear" aria-label="Clear search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile-only collapsible table of contents (desktop uses the sticky sidebar below) -->
+      <div class="toc-mobile">
+        <button type="button" class="toc-mobile-toggle js-toc-mobile-toggle" aria-expanded="false" aria-controls="toc-mobile-panel">
+          <span data-i18n="rules.toc.mobileLabel">Table of contents</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="toc-mobile-panel js-toc-mobile-panel" id="toc-mobile-panel">
+          <nav class="toc-list js-toc-list-mobile" aria-label="Table of contents"></nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="rules-layout">
+      <aside class="toc">
+        <div class="toc-title" data-i18n="rules.toc.title">Table of contents</div>
+        <nav class="toc-list js-toc-list" aria-label="Table of contents"></nav>
+      </aside>
+
+      <div class="rules-content">
+        <div class="rule-sections js-rule-sections"></div>
+
+        <div class="search-empty js-search-empty">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          </span>
+          <h3 data-i18n="rules.empty.title">No rules match your search</h3>
+          <p data-i18n="rules.empty.body">Try a different word.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <img class="js-logo" src="assets/logo.png" alt="">
+      <span class="js-footer-name">SERVER NAME</span>
+    </div>
+    <p class="footer-note" data-i18n="footer.note">Community server portal.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/rules.js"></script>
+</body>
+</html>

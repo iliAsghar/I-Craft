@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plugins & Datapacks — Server Portal</title>
+
+<script>
+(function(){
+  try{
+    var lang = localStorage.getItem('server-portal:lang') || 'en';
+    var theme = localStorage.getItem('server-portal:theme');
+    if(!theme){ theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('data-theme', theme);
+  }catch(e){}
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="plugins">
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img class="js-logo" src="assets/logo.png" alt="Server logo">
+      <span class="js-brand-name brand-name">SERVER NAME</span>
+    </a>
+
+    <nav class="nav-primary js-nav-links" aria-label="Primary"></nav>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn lang-toggle js-lang-toggle" data-i18n-aria-label="action.toggleLang" aria-label="Switch language">EN</button>
+      <button type="button" class="icon-btn js-theme-toggle" data-i18n-aria-label="action.toggleTheme" aria-label="Toggle color theme"></button>
+      <button type="button" class="icon-btn nav-toggle js-nav-toggle" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="nav.openMenu"></button>
+    </div>
+  </div>
+
+</header>
+
+<div class="mobile-nav js-mobile-nav">
+  <nav class="js-nav-links" aria-label="Mobile navigation"></nav>
+</div>
+
+<main id="main">
+  <div class="page-header">
+    <div class="container">
+      <h1 data-i18n="plugins.title">Plugins & Datapacks</h1>
+      <p data-i18n="plugins.lede">What's running behind the scenes.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="entry-grid js-plugins-grid"></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <img class="js-logo" src="assets/logo.png" alt="">
+      <span class="js-footer-name">SERVER NAME</span>
+    </div>
+    <p class="footer-note" data-i18n="footer.note">Community server portal.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/plugins.js"></script>
+</body>
+</html>

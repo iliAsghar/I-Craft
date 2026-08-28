@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Server Portal</title>
+
+<!-- Set lang/dir/theme before first paint to avoid a flash of the wrong state -->
+<script>
+(function(){
+  try{
+    var lang = localStorage.getItem('server-portal:lang') || 'en';
+    var theme = localStorage.getItem('server-portal:theme');
+    if(!theme){ theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('data-theme', theme);
+  }catch(e){}
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img class="js-logo" src="assets/logo.png" alt="Server logo">
+      <span class="js-brand-name brand-name">SERVER NAME</span>
+    </a>
+
+    <nav class="nav-primary js-nav-links" aria-label="Primary"></nav>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn lang-toggle js-lang-toggle" data-i18n-aria-label="action.toggleLang" aria-label="Switch language">EN</button>
+      <button type="button" class="icon-btn js-theme-toggle" data-i18n-aria-label="action.toggleTheme" aria-label="Toggle color theme"></button>
+      <button type="button" class="icon-btn nav-toggle js-nav-toggle" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="nav.openMenu"></button>
+    </div>
+  </div>
+
+</header>
+
+<div class="mobile-nav js-mobile-nav">
+  <nav class="js-nav-links" aria-label="Mobile navigation"></nav>
+</div>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container">
+      <img class="hero-logo js-logo" src="assets/logo.png" alt="Server logo">
+
+      <span class="eyebrow" data-i18n="home.eyebrow">Welcome</span>
+
+      <h1>
+        <span data-i18n="home.title.a">Build something</span>
+        <span class="accent" data-i18n="home.title.b">worth protecting.</span>
+      </h1>
+
+      <p class="hero-lede" data-i18n="home.lede">
+        This is the community portal for our server.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="rules.html" data-i18n="home.cta.rules">Read the rules</a>
+        <a class="btn btn-ghost" href="plugins.html" data-i18n="home.cta.plugins">See what's running</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="home.section.eyebrow">Find your way around</span>
+        <h2 data-i18n="home.section.title">Everything you need before you join</h2>
+        <p data-i18n="home.section.lede">Three short stops before you drop your first block.</p>
+      </div>
+
+      <div class="card-grid">
+        <a class="link-card" href="rules.html">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5M8 12h8M8 16h8M8 8h3"/></svg></span>
+          <h3 data-i18n="home.card.rules.title">Rules</h3>
+          <p data-i18n="home.card.rules.desc">The full rulebook.</p>
+          <span class="card-cta">
+            <span data-i18n="home.card.rules.cta">Open the rulebook</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+
+        <a class="link-card" href="plugins.html">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4M6 7h12l-1 6a5 5 0 0 1-5 4h0a5 5 0 0 1-5-4L6 7Z"/><path d="M10 21v-6M14 21v-6"/></svg></span>
+          <h3 data-i18n="home.card.plugins.title">Plugins & Datapacks</h3>
+          <p data-i18n="home.card.plugins.desc">What's running under the hood.</p>
+          <span class="card-cta">
+            <span data-i18n="home.card.plugins.cta">Browse plugins</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+
+        <a class="link-card" href="mods.html">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8v8l9 5 9-5V8l-9-5Z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span>
+          <h3 data-i18n="home.card.mods.title">Recommended Mods</h3>
+          <p data-i18n="home.card.mods.desc">Client-side mods that help.</p>
+          <span class="card-cta">
+            <span data-i18n="home.card.mods.cta">Browse mods</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <img class="js-logo" src="assets/logo.png" alt="">
+      <span class="js-footer-name">SERVER NAME</span>
+    </div>
+    <p class="footer-note" data-i18n="footer.note">Community server portal.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
