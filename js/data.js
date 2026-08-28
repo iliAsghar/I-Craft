@@ -981,30 +981,344 @@ const plugins = [
    side: "client" | "server" | "both"
    Fields: name, description, icon (optional), version, side, link
    ------------------------------------------------------------------------- */
+
 const mods = [
   {
-    id: "example-mod-one",
-    name: "ExampleMod",
-    icon: null,
-    version: "1.20.x",
+    id: "armor-poser",
+    name: "Armor Poser",
+    icon: "https://cdn.modrinth.com/data/PFwYNrHb/icon.png",
+    version: "26.2",
     side: "client",
     description: {
-      en: "Example placeholder entry — replace with a mod you actually recommend, and why.",
-      fa: "نمونه‌ی جای‌گزین — این را با مادی که واقعاً پیشنهاد می‌کنید و دلیل آن جایگزین کنید."
+      en: "Configure armor stands with an easy-to-use GUI, including their pose, arms, base plate, and other properties.",
+      fa: "با یک رابط کاربری ساده، حالت و ویژگی‌های آرمور استندها را تنظیم کنید؛ مثل حالت ایستادن، دست‌ها و..."
     },
-    link: "#"
+    link: "https://modrinth.com/mod/armor-poser"
   },
+
   {
-    id: "example-mod-two",
-    name: "AnotherMod",
-    icon: null,
-    version: "1.20.x",
-    side: "both",
+    id: "atmospherics",
+    name: "ATMOSPHERICS",
+    icon: "https://cdn.modrinth.com/data/ft2cYBpB/167f7cb559efaa1c16102a4675a6a08b9bd709b5.webp",
+    version: "26.2",
+    side: "client",
     description: {
-      en: "A second placeholder entry to preview the card grid with a client + server mod.",
-      fa: "یک نمونه‌ی دوم برای پیش‌نمایش چیدمان کارت‌ها با مادی که هم سمت کلاینت و هم سرور است."
+      en: "Customize fog, sky, clouds, haze, and stars on a per-biome basis.",
+      fa: "مه، آسمان، ابرها، غبار خاک و ستاره‌ها را برای هر بایوم به‌صورت جداگانه شخصی‌سازی کنید."
     },
-    link: "#"
+    link: "https://modrinth.com/mod/atmospherics"
+  },
+
+  {
+    id: "better-block-entities",
+    name: "Better Block Entities",
+    icon: "https://cdn.modrinth.com/data/ONZm0H7Y/5ff4f3ad6948a0bf185f641c407878932bae3dcf.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Improves block entity rendering to reduce rendering overhead and improve performance, especially with Sodium.",
+      fa: "رندر بلاک‌انتیتی‌ها را بهینه می‌کند تا فشار پردازشی کمتر و عملکرد بهتری داشته باشین، به‌خصوص در کنار Sodium."
+    },
+    link: "https://modrinth.com/mod/better-block-entities"
+  },
+
+  {
+    id: "bobby",
+    name: "Bobby",
+    icon: "https://cdn.modrinth.com/data/M08ruV16/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Allows you to render farther than the server's view distance by locally storing previously loaded chunks.",
+      fa: "با ذخیره‌ی چانک‌های قبلاً دیده‌شده، امکان نمایش فاصله‌ای بیشتر از View Distance سرور رو فراهم می‌کنه."
+    },
+    link: "https://modrinth.com/mod/bobby"
+  },
+
+  {
+    id: "better-stats",
+    name: "Better Statistics Screen",
+    icon: "https://cdn.modrinth.com/data/n6PXGAoM/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Improves Minecraft's statistics screen with better organization, filtering, and additional useful information.",
+      fa: "صفحه‌ی Statistics ماینکرفت رو با سازمان‌دهی بهتر، فیلترها و اطلاعات کاربردی‌تر بهبود می‌ده."
+    },
+    link: "https://modrinth.com/mod/better-stats"
+  },
+
+  {
+    id: "calcmod",
+    name: "CalcMod",
+    icon: "https://cdn.modrinth.com/data/XoHTb2Ap/fe87f9fb4d48afbe539314b17e1be68ba242e58a.gif",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds a powerful calculator directly to Minecraft chat, with shortcuts for common calculations.",
+      fa: "یک ماشین‌حساب کاربردی مستقیماً به چت Minecraft اضافه می‌کنه که از محاسبات مختلف پشتیبانی می‌کنه."
+    },
+    link: "https://modrinth.com/plugin/calcmod"
+  },
+
+  {
+    id: "camera-utils",
+    name: "Camera Utils",
+    icon: "https://cdn.modrinth.com/data/rrwQMaWQ/00f30d85352fdbbc34354a550b24ee153848800f.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds useful camera controls including dynamic zoom, camera detaching, extended third-person views, and cinematic controls.",
+      fa: "امکاناتی مثل زوم قابل تغییر، جداسازی دوربین، نمای سوم‌شخص گسترده و کنترل‌های سینمایی دیگه‌ای رو اضافه می‌کنه."
+    },
+    link: "https://modrinth.com/mod/camera-utils"
+  },
+
+  {
+    id: "chat-heads",
+    name: "Chat Heads",
+    icon: "https://cdn.modrinth.com/data/Wb5oqrBJ/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Displays players' heads next to their chat messages, making conversations easier to follow.",
+      fa: "سر بازیکنان را کنار پیام‌هایشان در چت نمایش می‌ده تا تشخیص افراد در گفتگو راحت‌تر شه."
+    },
+    link: "https://modrinth.com/mod/chat-heads"
+  },
+
+  {
+    id: "continuity",
+    name: "Continuity",
+    icon: "https://cdn.modrinth.com/data/1IjD5062/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds support for connected and emissive textures from compatible resource packs without requiring OptiFine.",
+      fa: "با این ماد میتونید تکسچرهای متصل (مثل شیشه) داشته باشین."
+    },
+    link: "https://modrinth.com/mod/continuity"
+  },
+
+  {
+    id: "controlling",
+    name: "Controlling",
+    icon: "https://cdn.modrinth.com/data/xv94TkTM/d0ae59393a10daa261905091329e56bf8a69c38a.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds a search bar to the key-bindings menu, making it much easier to find and manage controls.",
+      fa: "موقع تغییر Keybindها، میتونید از قابلیت سرچ استفاده کنید."
+    },
+    link: "https://modrinth.com/mod/controlling"
+  },
+
+  {
+    id: "freecam",
+    name: "Freecam",
+    icon: "https://cdn.modrinth.com/data/XeEZ3fK2/9529a900a2aa6ed56c1b3167f165bac91b3acd6e.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Lets you freely move your camera around the world while leaving your player in place.",
+      fa: "میتونید دوربین رو از کاراکترتون جدا کنید و برای دید بیشتر ازش استفاده کنید."
+    },
+    link: "https://modrinth.com/mod/freecam"
+  },
+
+  {
+    id: "item-scroller",
+    name: "Item Scroller",
+    icon: "https://cdn.modrinth.com/data/JygyCSA4/e786bb9ceacbb41daafd7cc39920ff05e4fb0a91.jpeg",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Makes inventory management, crafting, and villager trading much faster with scrolling and drag shortcuts.",
+      fa: "با میانبرهای اسکرول و Drag، مدیریت آیتم‌ها، کرفت کردن و ترید با ویلیجرها رو خیلی راحت‌تر و سریع‌تر می‌کنه."
+    },
+    link: "https://modrinth.com/mod/item-scroller"
+  },
+
+  {
+    id: "locator-heads",
+    name: "Locator Heads",
+    icon: "https://cdn.modrinth.com/data/L4pt5egz/933e270e6b68639189f618948f11d3828597df39.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Replaces player markers on the locator bar with their actual heads and adds additional tracking options.",
+      fa: "نشانگر بازیکنان در Locator Bar را با هد اسکین‌شون جایگزین می‌کنه."
+    },
+    link: "https://modrinth.com/mod/locator-heads"
+  },
+
+  {
+    id: "no-chat-reports",
+    name: "No Chat Reports",
+    icon: "https://cdn.modrinth.com/data/qQyHxfxd/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Removes chat signatures where possible and prevents Minecraft's chat messages from being cryptographically associated with your account. this mod usually fixes chat lag.",
+      fa: "در صورت امکان امضای رمزنگاری‌شده‌ی پیام‌های چت را حذف می‌کند تا پیام‌ها به حساب شما مرتبط نشوند. این ماد معمولا لگ چت رو برطرف می‌کنه."
+    },
+    link: "https://modrinth.com/mod/no-chat-reports"
+  },
+
+  {
+    id: "mod-menu",
+    name: "Mod Menu",
+    icon: "https://cdn.modrinth.com/data/mOgUt4GM/5a20ed1450a0e1e79a1fe04e61bb4e5878bf1d20.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds an in-game menu for viewing installed mods, their information, and available configuration options.",
+      fa: "منویی داخل بازی برای مشاهده‌ی مادهای نصب‌شده، اطلاعات اون‌ها و... اضافه می‌کنه."
+    },
+    link: "https://modrinth.com/mod/modmenu"
+  },
+
+  {
+    id: "packed-packs",
+    name: "Packed Packs",
+    icon: "https://cdn.modrinth.com/data/8Pq6Exn2/ddfa6a6bc6bc282160fa92b70df711fab6948d01.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Organizes resource and data packs into profiles with easier selection, drag-and-drop, and management tools.",
+      fa: "Resource Pack ها را در پروفایل‌های مرتب قرار می‌ده و مدیریت آن‌ها را راحت‌تر می‌کنه."
+    },
+    link: "https://modrinth.com/mod/packed-packs"
+  },
+
+  {
+    id: "reach-behind",
+    name: "Reach Behind",
+    icon: "https://cdn.modrinth.com/data/MDljZreW/d3127b4ea0bd4dd304192fbcacc7a693d424d3cb.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Lets you interact with usable blocks hidden behind decorations such as signs, banners, and item frames.",
+      fa: "با این ماد میتونید با بلاک‌های پشت بنرها یا آیتم‌فریم‌ها تعامل داشته باشید‌(مثلا باز کردن چست پشت آیتم‌فریم)"
+    },
+    link: "https://modrinth.com/mod/reach-behind"
+  },
+
+  {
+    id: "screenshot-viewer",
+    name: "Screenshot Viewer",
+    icon: "https://media.forgecdn.net/avatars/thumbnails/627/914/64/64/638023801589782702.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "View and manage your Minecraft screenshots directly inside the game.",
+      fa: "اسکرین‌شات‌های Minecraft را مستقیماً داخل بازی مشاهده و مدیریت کنید."
+    },
+    link: "https://www.curseforge.com/minecraft/mc-mods/screenshot-viewer"
+  },
+
+  {
+    id: "scribble",
+    name: "Scribble",
+    icon: "https://cdn.modrinth.com/data/yXAvIk0x/cf63f0295c57f6f2f14c51d8e1075de19e9f4f76.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds rich text formatting, editing tools, and other improvements for writing Minecraft books.",
+      fa: "امکانات قالب‌بندی متن، ویرایش و ابزارهای بیشتر برای نوشتن کتاب‌‌ها رو اضافه می‌کنه."
+    },
+    link: "https://modrinth.com/mod/scribble"
+  },
+
+  {
+    id: "simply-no-shading",
+    name: "Simply No Shading",
+    icon: "https://cdn.modrinth.com/data/9gx5Xvc5/d293f531ebbd4248ec7516951149f9be6817c695.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Removes unwanted side shading from blocks, clouds, and entities for a cleaner, flatter visual style.",
+      fa: "سایه‌های اضافی روی کناره‌های بلاک‌ها، ابرها و ماب‌ها رو حذف می‌کنه تا ظاهر ساده‌تر و تمیزتری ایجاد شه."
+    },
+    link: "https://modrinth.com/mod/simply-no-shading"
+  },
+
+  {
+    id: "3d-skin-layers",
+    name: "3D Skin Layers",
+    icon: "https://cdn.modrinth.com/data/zV5r3pPn/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Turns the normally flat second layer of player skins into a detailed 3D model.",
+      fa: "لایه‌ی دوم اسکین بازیکنان را که معمولاً تخت هست رو به یک مدل سه‌بعدی تبدیل می‌کنه."
+    },
+    link: "https://modrinth.com/mod/3dskinlayers"
+  },
+
+  {
+    id: "sodium",
+    name: "Sodium",
+    icon: "https://cdn.modrinth.com/data/AANobbMI/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "A high-performance rendering engine that significantly improves Minecraft's FPS and rendering efficiency.",
+      fa: "یک موتور رندرینگ بهینه که عملکرد و FPS بازی Minecraft را به‌طور قابل توجهی بهبود می‌دهد."
+    },
+    link: "https://modrinth.com/mod/sodium"
+  },
+
+  {
+    id: "sodium-extra",
+    name: "Sodium Extra",
+    icon: "https://cdn.modrinth.com/data/PtjYWJkn/icon.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds extra visual, animation, particle, rendering, and performance settings to Sodium.",
+      fa: "تنظیمات بیشتر برای جلوه‌های بصری، انیمیشن‌ها، پارتیکل‌ها، رندر بلاک‌ها و... رو به Sodium اضافه می‌کنه."
+    },
+    link: "https://modrinth.com/mod/sodium-extra"
+  },
+
+  {
+    id: "sound-controller",
+    name: "Sound Controller",
+    icon: "https://cdn.modrinth.com/data/uY9zbflw/c20f0a6ac542e9c147e452b57211ea85e717c19b.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Provides individual volume controls for every game sound, along with presets, filters, and region-based settings.",
+      fa: "برای تک‌تک صداهای بازی کنترل جداگانه‌ی صدا فراهم می‌کنه و از Preset، فیلتر و تنظیمات منطقه‌های خاص پشتیبانی می‌کنه."
+    },
+    link: "https://modrinth.com/mod/sound-controller"
+  },
+
+  {
+    id: "xaeros-minimap",
+    name: "Xaero's Minimap",
+    icon: "https://cdn.modrinth.com/data/1bokaNcj/80eb00784e250b99fb1789da35869387d14d5637.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds a lightweight minimap showing terrain, players, mobs, entities, and customizable waypoints.",
+      fa: "یک مینی‌مپ سبک برای نمایش محیط، پلیرها، ماب‌ها و Waypointهای قابل شخصی‌سازی اضافه می‌کند."
+    },
+    link: "https://modrinth.com/mod/xaeros-minimap"
+  },
+
+  {
+    id: "xaeros-world-map",
+    name: "Xaero's World Map",
+    icon: "https://cdn.modrinth.com/data/NcUtCpym/80eb00784e250b99fb1789da35869387d14d5637.png",
+    version: "26.2",
+    side: "client",
+    description: {
+      en: "Adds a fullscreen, self-writing map of the world you have explored.",
+      fa: "همانند 'Xaero's Minimap'، یک نقشه‌ی کلی از ورلد و جاهایی که لود کردید براتون اضافه می‌کنه."
+    },
+    link: "https://modrinth.com/mod/xaeros-world-map"
   }
 ];
 
