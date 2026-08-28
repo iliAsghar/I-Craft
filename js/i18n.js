@@ -76,7 +76,7 @@ const STRINGS = {
     // "mods.side.server": "Server",
     // "mods.side.both": "Client + Server",
 
-    "footer.note": "Community server portal — not affiliated with Mojang or Microsoft.",
+    "footer.note": "'i Craft' server community portal - made by ili.",
     "footer.backToTop": "Back to top"
   },
 
@@ -141,7 +141,7 @@ const STRINGS = {
     // "mods.side.server": "سرور",
     // "mods.side.both": "کلاینت + سرور",
 
-    "footer.note": "پورتال جامعه‌ی سرور — وابسته به Mojang یا مایکروسافت نیست.",
+    "footer.note": "پرتال کامیونیتی سرور آی‌کرفت - ساخته‌شده توسط آیلای.",
     "footer.backToTop": "بازگشت به بالا"
   }
 };
