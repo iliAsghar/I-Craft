@@ -130,7 +130,7 @@ function initThemeToggle(){
 
 function initLangToggle(){
   document.querySelectorAll(".js-lang-toggle").forEach(btn => {
-    const update = () => { btn.textContent = getLang() === "en" ? "FA" : "EN"; };
+    const update = () => { btn.textContent = getLang() === "en" ? "فا" : "EN"; };
     update();
     btn.addEventListener("click", () => {
       setLang(getLang() === "en" ? "fa" : "en");
