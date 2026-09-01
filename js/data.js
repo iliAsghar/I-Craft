@@ -855,18 +855,6 @@ const plugins = [
     link: "https://modrinth.com/plugin/authmereloaded"
   },
   {
-    id: "playtimecommand",
-    name: "Playtime Command",
-    type: "plugin",
-    icon: "https://cdn.modrinth.com/data/okeAxC3Y/10a1b5d8c84f954351d7be8917a596a894f08cf9.png",
-    version: "26.2",
-    description: {
-      en: "Playtime Command is a very simple plugin that lets you see your own or other online players' playtime.",
-      fa: "Playtime Command یک پلاگین ساده برای مشاهده پلی‌تایم خودتون یا بقیه پلیرهاست."
-    },
-    link: "https://modrinth.com/plugin/playtimecommand"
-  },
-  {
     id: "gsit",
     name: "GSit",
     type: "plugin",
@@ -973,7 +961,55 @@ const plugins = [
       fa: "بعد از کشتن یک ماب، احتمال داره هد اون دراپ شه."
     },
     link: "https://vanillatweaks.net/picker/datapacks/"
-  }
+  },
+  {
+    id: "multiplayersleep",
+    name: "Multiplayer Sleep",
+    type: "datapack",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx1zkJX_rITYzYGVsgpdMEeA1kPwGvftHD-z-aug7_hA&s=10",
+    version: "26.2",
+    description: {
+      en: "A simple datapack to configure multiplayer sleep.",
+      fa: "یک دیتاپک ساده برای تنظیمات sleep توی سرور"
+    },
+    link: "https://vanillatweaks.net/picker/datapacks/"
+  },
+  {
+    id: "unlockallrecipes",
+    name: "Unlock All Recipes",
+    type: "datapack",
+    icon: "https://minecraft.wiki/images/Knowledge_Book_JE2.png?c1af4",
+    version: "26.2",
+    description: {
+      en: "Unlock all the recipes as soon as you start playing.",
+      fa: "بلافاصله بعد از شروع بازی، همه‌ی recipeها رو باز کن."
+    },
+    link: "https://vanillatweaks.net/picker/datapacks/"
+  },
+  {
+    id: "paitingpicker",
+    name: "Painting Picker",
+    type: "datapack",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvgUTnwuF7php1dsNSykRkv5LSRZL17BEDcF0V1t-qUw&s=10",
+    version: "26.2",
+    description: {
+      en: "Use a stonecutter to pick a painting's variant.",
+      fa: "با استفاده از یک Stonecutter، نوع Painting رو انتخاب کن."
+    },
+    link: "https://vanillatweaks.net/picker/datapacks/"
+  },
+  {
+    id: "simpleafk",
+    name: "Simple AFK",
+    type: "plugin",
+    icon: "https://cdn.modrinth.com/data/QdSH9Viy/4f326a6267b08725ab1ccda2b9f53ad37833bde1_96.webp",
+    version: "26.2",
+    description: {
+      en: "Grays out a player's name when they go AFK. you can manually go AFK by typing /afk",
+      fa: "وقتی یه پلیر AFK میشه، اسمش رو کمرنگ میکنه. میتونی دستی با /afk تنظیم کنی."
+    },
+    link: "https://modrinth.com/plugin/simple-afk"
+  },
 ];
 
 /* -------------------------------------------------------------------------
